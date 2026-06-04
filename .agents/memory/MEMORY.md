@@ -1,0 +1,4 @@
+- [RDTech status flow](rdtech-status-flow.md) — 3-step flow PENDENTE→AGUARDANDO_PAGAMENTO→APROVADO; each step generates different PDFs.
+- [RDTech pdf generation](rdtech-pdf-generation.md) — pdf.ts uses getCompanyInfo() per function call (dynamic, from localStorage); QuoteData has paymentLink, combinadoDate, cancelReason fields.
+- [RDTech cloud sync](rdtech-cloud-sync.md) — API server stores data to /tmp/rdtech_server_data.json; frontend syncs via /api/rdtech/data debounced 800ms; loadFromServer() merges server entries not in localStorage.
+- [RDTech PDF preview mode](rdtech-pdf-preview.md) — pass opts.preview=true to any PDF generator to get blob URL; must cast doc.output("bloburi") as unknown as string to satisfy TS2352.
